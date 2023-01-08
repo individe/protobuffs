@@ -1,0 +1,11 @@
+package individe;
+
+syntax = "proto3";
+
+enum EncryptionAlgorithm {
+    AES = 0;
+}
+
+message System {
+    EncryptionAlgorithm encryption = 1;
+}

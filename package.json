@@ -1,0 +1,25 @@
+{
+  "name": "@individe/protobuffs",
+  "version": "0.0.1",
+  "description": "Protocol buffers for Individe.",
+  "entry": "src/index.js",
+  "scripts": {
+    "prepare": "node src/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/individe/protobuffs"
+  },
+  "keywords": [
+    "individe",
+    "protobuffs",
+    "protocol",
+    "buffers",
+    "definitions"
+  ],
+  "author": "Aleksa Milošević (ajaleksa)",
+  "license": "MIT",
+  "devDependencies": {
+    "protobufjs": "^7.1.2"
+  }
+}
