@@ -1,0 +1,8 @@
+package individe;
+
+syntax = "proto3";
+
+message Device {
+    string key = 1;
+    optional string password = 2;
+}

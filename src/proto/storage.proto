@@ -1,0 +1,33 @@
+package individe;
+
+syntax = "proto3";
+
+enum EncryptionAlgorithm {
+    AES = 0;
+}
+
+message File {
+    string name = 1;
+    uint64 size = 2;
+    string multihash = 3;
+    bool encrypted = 4;
+    map<uint64, File> previous_versions = 5;
+}
+
+message Directory {
+    string name = 1;
+    uint64 size = 2;
+    repeated File files = 3;
+    repeated Directory directories = 4;
+    map<uint64, Directory> previous_versions = 5;
+}
+
+message Data {
+    Directory user = 1;
+    Directory app = 2;
+}
+
+message Storage {
+    EncryptionAlgorithm encryption = 1;
+    Data data = 2;
+}
