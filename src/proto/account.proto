@@ -6,6 +6,8 @@ import "./device.proto";
 import "./storage.proto";
 
 message Account {
-    Storage storage = 1;
-    repeated Device devices = 2;
+    string publicKey = 1;
+
+    Storage storage = 2;
+    repeated Device devices = 3;
 }
