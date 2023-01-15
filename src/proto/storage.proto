@@ -15,19 +15,14 @@ message File {
 }
 
 message Directory {
-    string name = 1;
+    optional string name = 1;
     uint64 size = 2;
     repeated File files = 3;
     repeated Directory directories = 4;
     map<uint64, Directory> previous_versions = 5;
 }
 
-message Data {
-    Directory user = 1;
-    Directory app = 2;
-}
-
 message Storage {
     EncryptionAlgorithm encryption = 1;
-    Data data = 2;
+    Directory data = 2;
 }
