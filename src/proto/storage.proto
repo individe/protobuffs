@@ -11,7 +11,7 @@ message File {
     uint64 size = 2;
     string multihash = 3;
     bool encrypted = 4;
-    map<uint64, File> previous_versions = 5;
+    map<uint64, File> previous_versions = 5; // timestamp to File mapping
 }
 
 message Directory {
@@ -19,7 +19,7 @@ message Directory {
     uint64 size = 2;
     repeated File files = 3;
     repeated Directory directories = 4;
-    map<uint64, Directory> previous_versions = 5;
+    map<uint64, Directory> previous_versions = 5; // timestamp to Directory mapping
 }
 
 message Storage {

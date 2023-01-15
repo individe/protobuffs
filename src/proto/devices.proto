@@ -4,5 +4,11 @@ syntax = "proto3";
 
 message Device {
     string key = 1;
-    optional string password = 2;
+    string format = 2; // encrypted key format, if not provided, key is not encrypted
+    optional string password = 3;
+
+    optional string id = 4; // peerId, to allow for syncing with the remote device, without authenticating and conflicts
+
+    optional string name = 5; // device name (for show purposes)
+    optional string icon = 6; // icon's multihash
 }
