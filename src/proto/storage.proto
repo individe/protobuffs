@@ -9,7 +9,7 @@ enum EncryptionAlgorithm {
 message File {
     string name = 1;
     uint64 size = 2;
-    string multihash = 3;
+    bytes multihash = 3;
     bool encrypted = 4;
     map<uint64, File> previous_versions = 5; // timestamp to File mapping
 }

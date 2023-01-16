@@ -1,6 +1,6 @@
 {
   "name": "@individe/protobuffs",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Protocol buffers for Individe.",
   "entry": "src/index.js",
   "scripts": {

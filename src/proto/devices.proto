@@ -2,13 +2,18 @@ package individe;
 
 syntax = "proto3";
 
+enum KeyFormat {
+    PEM = 0;
+    AES_GCM = 1;
+}
+
 message Device {
-    string key = 1;
-    string format = 2; // encrypted key format, if not provided, key is not encrypted
+    bytes key = 1;
+    optional KeyFormat keyFormat = 2; // encrypted key format, if not provided, key is not encrypted
     optional string password = 3;
 
-    optional string id = 4; // peerId, to allow for syncing with the remote device, without authenticating and conflicts
+    optional bytes id = 4; // peerId, to allow for syncing with the remote device, without authenticating and conflicts
 
     optional string name = 5; // device name (for show purposes)
-    optional string icon = 6; // icon's multihash
+    optional bytes icon = 6; // icon's multihash
 }
