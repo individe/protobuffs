@@ -16,10 +16,9 @@ message File {
 
 message Directory {
     optional string name = 1;
-    uint64 size = 2;
-    repeated File files = 3;
-    repeated Directory directories = 4;
-    map<uint64, Directory> previous_versions = 5; // timestamp to Directory mapping
+    repeated File files = 2;
+    repeated Directory directories = 3;
+    map<uint64, Directory> previous_versions = 4; // timestamp to Directory mapping
 }
 
 message Storage {
