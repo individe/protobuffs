@@ -1,4 +1,4 @@
-package individe;
+package individe.storage;
 
 syntax = "proto3";
 
