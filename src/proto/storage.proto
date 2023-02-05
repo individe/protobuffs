@@ -12,7 +12,7 @@ message File {
     optional bytes multihash = 3;
     bool encrypted = 4;
     uint64 lastModified = 5;
-    File previousVersion = 6;
+    optional File previousVersion = 6;
 }
 
 message Directory {
@@ -20,7 +20,7 @@ message Directory {
     repeated File files = 2;
     repeated Directory directories = 3;
     uint64 lastModified = 4;
-    File previousVersion = 5;
+    optional Directory previousVersion = 5;
 }
 
 message Storage {
