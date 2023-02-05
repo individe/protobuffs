@@ -11,14 +11,16 @@ message File {
     uint64 size = 2;
     optional bytes multihash = 3;
     bool encrypted = 4;
-    map<uint64, File> previous_versions = 5; // timestamp to File mapping
+    uint64 lastModified = 5;
+    File previousVersion = 6;
 }
 
 message Directory {
     optional string name = 1;
     repeated File files = 2;
     repeated Directory directories = 3;
-    map<uint64, Directory> previous_versions = 4; // timestamp to Directory mapping
+    uint64 lastModified = 4;
+    File previousVersion = 5;
 }
 
 message Storage {
