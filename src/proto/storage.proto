@@ -21,7 +21,6 @@ message Directory {
     repeated File files = 2;
     repeated Directory directories = 3;
     uint64 lastModified = 4;
-    optional Directory previousVersion = 5;
 }
 
 message Storage {
